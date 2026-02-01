@@ -7,10 +7,6 @@
   height: fit-content;
   overflow-y: auto;
 
-  @include mobile {
-    height: 100dvh;
-  }
-
   @include block;
 
   @include tablet {
@@ -37,8 +33,9 @@
   position: fixed;
   inset: 0;
   border-radius: 0;
-  height: 100vh;
+  height: 100dvh;
   z-index: var(--z-index-under);
+  padding-bottom: calc(env(safe-area-inset-bottom) + 12px);
 }
 
 .closeButton {

@@ -8,7 +8,7 @@ export default defineConfig(({ mode }) => {
   const isProd = mode === "production";
 
   return {
-    base: isProd ? "/store-react/" : "/",
+    base: isProd ? "/tech-house/" : "/",
     plugins: [
       react(),
       svgSprite({
