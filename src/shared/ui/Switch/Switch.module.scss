@@ -1,0 +1,40 @@
+.container {
+  display: flex;
+  align-items: center;
+  column-gap: 15px;
+}
+
+.switch {
+  --size: 60px;
+  position: relative;
+  width: var(--size);
+  height: calc(var(--size) / 2);
+  background-color: var(--color-accent-dark);
+  border-radius: var(--border-radius-xl);
+  cursor: pointer;
+  z-index: var(--z-index-m);
+
+  &:has(input:checked) {
+    background-color: var(--color-accent);
+  }
+}
+
+.input {
+  display: none;
+}
+
+.slider {
+  position: absolute;
+  top: 50%;
+  left: 4px;
+  transform: translateY(-50%);
+  background-color: var(--color-white);
+  border-radius: 50%;
+  transition: transform var(--transition-duration);
+
+  @include square(calc(var(--size) / 2 - 8px));
+
+  .input:checked + & {
+    transform: translate(calc(var(--size) / 2), -50%);
+  }
+}

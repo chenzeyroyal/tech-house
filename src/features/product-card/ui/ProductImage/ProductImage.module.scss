@@ -1,0 +1,17 @@
+.small {
+  .link {
+    margin-bottom: 10px;
+  }
+}
+
+.small,
+.large {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image {
+  user-select: none;
+  width: fluid-to-laptop(200, 125);
+}

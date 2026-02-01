@@ -1,0 +1,47 @@
+.inner {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+
+  @include mobile {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 15px;
+  }
+}
+
+.notInStock {
+  & > :nth-child(-n + 2) {
+    opacity: 0.5;
+  }
+}
+
+/*----------------MODES--------------*/
+
+.small,
+.medium {
+  @include block;
+}
+
+.small {
+  height: 100%;
+
+  .inner {
+    grid-template-columns: 1fr;
+    row-gap: 15px;
+  }
+}
+
+.large {
+  .inner {
+    @include tablet {
+      grid-template-columns: 1fr;
+      text-align: center;
+      gap: 15px;
+    }
+  }
+}
+
+/*----------------------------------*/

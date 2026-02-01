@@ -1,0 +1,14 @@
+.banner {
+  display: flex;
+  padding: 25px;
+  justify-content: center;
+  column-gap: 25px;
+
+  @include tablet {
+    flex-direction: column;
+    row-gap: 15px;
+  }
+}
+.image {
+  border-radius: var(--border-radius-xl);
+}

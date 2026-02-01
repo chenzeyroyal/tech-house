@@ -1,0 +1,30 @@
+.checkbox {
+  display: flex;
+  align-items: center;
+  column-gap: fluid-to-laptop(10, 8);
+}
+.input {
+  appearance: none;
+  margin: 0;
+  background-color: var(--color-accent-dark);
+  border-radius: var(--border-radius-xs);
+  cursor: pointer;
+
+  @include square(25px);
+  @include flex-center;
+
+  &:checked {
+    &::after {
+      content: "✔";
+      color: var(--color-white);
+    }
+  }
+
+  @include hover {
+    background-color: var(--color-grey);
+  }
+}
+
+.label {
+  user-select: none;
+}

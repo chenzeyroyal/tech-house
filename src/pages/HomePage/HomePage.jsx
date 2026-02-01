@@ -1,15 +1,18 @@
-import Layout from "@/app/Layout";
-import Hero from "@/entities/sections/Hero";
-import Popular from "@/entities/sections/Popular";
-import Stories from "@/entities/sections/Stories";
+import Banner from "@/shared/ui/Bannner";
+import Hero from "@/widgets/sections/Hero";
+import Hits from "@/widgets/sections/Hits";
+import Popular from "@/widgets/sections/Popular";
+import Stories from "@/widgets/sections/Stories";
 
 const HomePage = () => {
   return (
-    <Layout>
+    <>
       <Hero />
       <Stories />
+      <Hits />
+      <Banner />
       <Popular />
-    </Layout>
+    </>
   );
 };
 

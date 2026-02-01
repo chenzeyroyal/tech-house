@@ -1,0 +1,20 @@
+.favButton {
+  svg {
+    transition-duration: var(--transition-duration);
+  }
+
+  &.isFavorite svg {
+    fill: red;
+    color: red;
+
+    @include hover {
+      filter: brightness(0.8);
+    }
+  }
+
+  &:not(.isFavorite) {
+    @include hover {
+      color: var(--color-red);
+    }
+  }
+}

@@ -9,7 +9,7 @@ body {
   flex-direction: column;
   font-family: var(--font-family-base);
   color: var(--color-white);
-  background-color: var(--color-black);
+  background-color: var(--color-accent-dark);
 
   @include tablet {
     padding-bottom: var(--menu-mobile-height);
@@ -67,7 +67,6 @@ h6,
 a,
 button,
 label,
-input,
 textarea,
 select,
 svg * {

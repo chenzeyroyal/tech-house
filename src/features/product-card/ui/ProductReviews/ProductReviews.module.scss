@@ -1,0 +1,28 @@
+.reviews {
+  display: flex;
+  flex-direction: column;
+
+  :global(.swiper-slide) {
+    height: auto;
+  }
+}
+
+.reviewCard {
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+  height: 100%;
+
+  @include block;
+
+  .username {
+    font-weight: 700;
+  }
+}
+
+.reviewsSlider {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

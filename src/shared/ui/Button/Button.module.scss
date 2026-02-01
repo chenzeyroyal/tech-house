@@ -6,11 +6,17 @@
   padding: 8px 12px;
   color: inherit;
   user-select: none;
+
+  &:disabled {
+    @include disabled;
+  }
 }
 
 .isAccent {
-  @include hover {
-    filter: brightness(0.8);
+  &:not(:disabled) {
+    @include hover {
+      filter: brightness(0.8);
+    }
   }
 
   background-color: var(--color-accent);
@@ -27,6 +33,7 @@
 }
 
 .circle {
-  @include square(40px);
+  @include square(30px);
+  padding: 7px;
   border-radius: 50%;
 }

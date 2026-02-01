@@ -1,0 +1,72 @@
+.carousel {
+  --width: 600px;
+  display: flex;
+  align-items: center;
+  column-gap: 50px;
+  max-width: var(--width);
+
+  .slider {
+    max-width: var(--width);
+  }
+
+  @include tablet {
+    --width: 300px;
+    flex-direction: column;
+    row-gap: 25px;
+  }
+}
+
+.pagination {
+  display: flex;
+  column-gap: 5px;
+
+  @include tablet-above {
+    @include visually-hidden;
+  }
+}
+
+.bullet {
+  display: inline-block;
+  border-radius: 50%;
+  background-color: var(--color-grey-03);
+
+  @include square(8px);
+}
+
+.activeBullet {
+  background-color: var(--color-accent);
+}
+
+.navigation {
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+}
+
+.navigationButton {
+  @include hover {
+    color: var(--color-accent);
+  }
+}
+
+.paginationButton {
+  background: none;
+  padding: 10px;
+  border: var(--border-width-s) solid var(--color-white);
+  width: 100px;
+  border-radius: var(--border-radius-l);
+
+  @include hover {
+    .paginationImage {
+      scale: 0.95;
+    }
+  }
+}
+
+.paginationImage {
+  transition-duration: var(--transition-duration);
+}
+
+.isActive {
+  border-color: var(--color-accent);
+}

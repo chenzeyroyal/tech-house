@@ -1,0 +1,18 @@
+.notificationContainer {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  z-index: var(--z-index-under);
+
+  @include tablet-above {
+    top: 100px;
+    left: 75%;
+  }
+
+  @include tablet {
+    top: 5%;
+    left: 50%;
+    translate: -50% 0;
+  }
+}

@@ -1,1 +1,7 @@
+.logo {
+  width: fluid-to-laptop(200, 150);
 
+  @include tablet {
+    padding-bottom: 10px;
+  }
+}

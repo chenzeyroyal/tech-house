@@ -1,7 +1,10 @@
 import classNames from "classnames";
 import Icon from "@/shared/ui/Icon";
+import { useCategories } from "@/entities/product/model/hooks/useCategories";
+import { Link } from "react-router-dom";
+import { memo } from "react";
+
 import styles from "./CategoryMenu.module.scss";
-import useCategories from "@/shared/hooks/useCategories";
 
 const CategoryMenu = (props) => {
   const { id, isExpanded } = props;
@@ -14,12 +17,12 @@ const CategoryMenu = (props) => {
       id={id}
     >
       <ul className={styles.list}>
-        {categories.map(({ title, icon }, index) => (
+        {categories.map(({ title, icon, id }, index) => (
           <li className="" key={index}>
-            <a className={styles.link}>
+            <Link to={`/categories/${id}`} className={styles.link}>
               <Icon name={icon} fill="none" />
               <span>{title}</span>
-            </a>
+            </Link>
           </li>
         ))}
       </ul>
@@ -27,4 +30,4 @@ const CategoryMenu = (props) => {
   );
 };
 
-export default CategoryMenu;
+export default memo(CategoryMenu);

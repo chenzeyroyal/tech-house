@@ -11,6 +11,7 @@ const SliderNavigation = (props) => {
     'outside' (default) || 'inside'
     */
     placement = "outside",
+    isAccent = true,
     hasPagination = true,
     hasButtons = true,
   } = props;
@@ -23,7 +24,7 @@ const SliderNavigation = (props) => {
           icon="chevron-left"
           label="Предыдущий слайд"
           mode="circle"
-          isAccent
+          isAccent={isAccent}
           isLabelHidden
           ref={navigationPrevRef}
         />
@@ -39,7 +40,7 @@ const SliderNavigation = (props) => {
           icon="chevron-right"
           label="Следующий слайд"
           mode="circle"
-          isAccent
+          isAccent={isAccent}
           isLabelHidden
           ref={navigationNextRef}
         />

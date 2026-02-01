@@ -1,20 +1,20 @@
 .categoryCard {
+  --size: #{fluid-to-laptop(300, 210)};
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 280px;
-  aspect-ratio: 1 / 1;
-  row-gap: 15px;
-  padding: 15px;
-  background-color: var(--color-accent-02);
+  width: var(--size);
+  height: var(--size);
+  background-color: var(--color-accent-light);
   border-radius: var(--border-radius-xl);
   transition: background-color var(--transition-duration) ease-in-out;
 
   @include hover {
-    background-color: var(--color-grey-02);
+    background-color: var(--color-grey);
   }
 }
 .title {
   word-break: break-all;
+  font-weight: 700;
 }

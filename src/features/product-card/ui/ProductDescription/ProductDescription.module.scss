@@ -1,0 +1,18 @@
+.description {
+  @include block;
+}
+.showMoreButton {
+  padding: 0;
+  padding-top: 5px;
+  color: var(--color-accent);
+
+  @include hover {
+    color: var(--color-grey-02);
+  }
+}
+
+.text {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+}

@@ -1,7 +1,3 @@
-.field {
-  width: 100%;
-}
-
 .input {
   padding: 10px;
   width: 100%;
@@ -11,4 +7,14 @@
   @include hover {
     background-color: var(--color-grey-03);
   }
+
+  &[type="search"]::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+    appearance: none;
+    display: none;
+  }
+}
+
+.isInvalid {
+  border: var(--border-width-s) solid var(--color-red);
 }

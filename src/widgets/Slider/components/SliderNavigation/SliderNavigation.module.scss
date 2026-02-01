@@ -1,6 +1,7 @@
 .navigation {
   align-items: center;
   justify-content: space-between;
+  padding-bottom: 30px;
 
   .pagination {
     display: flex;
@@ -40,8 +41,7 @@
     bottom: 10px;
 
     .pagination {
-      background-color: var(--color-grey-02);
-      box-shadow: var(--shadow);
+      background-color: var(--color-grey);
     }
   }
 

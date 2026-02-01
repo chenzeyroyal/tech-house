@@ -1,0 +1,14 @@
+.appliedFilters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.appliedItem {
+  position: relative;
+  display: inline-flex;
+  background-color: var(--color-accent-light);
+  border-radius: var(--border-radius-xl);
+  padding: 10px 15px;
+  column-gap: 5px;
+}

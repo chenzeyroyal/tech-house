@@ -1,0 +1,86 @@
+.select {
+  display: flex;
+  flex-direction: column;
+  column-gap: 30px;
+  border-radius: var(--border-radius-l);
+  transition-duration: var(--transition-duration);
+
+  @include hover(false) {
+    background-color: var(--color-accent-light);
+  }
+
+  &:not(.isExpanded) {
+    .dropdown {
+      @include hide;
+    }
+    .arrow {
+      rotate: 180deg;
+    }
+  }
+}
+
+.originalControl,
+.button {
+  min-width: 230px;
+}
+
+.originalControl {
+  appearance: none;
+  background: none;
+  color: var(--color-white);
+  background-image: url(../../assets/icons/chevron-down-white.svg);
+  padding-left: 35px;
+  margin-left: 35px;
+  padding-bottom: 15px;
+  background-repeat: no-repeat;
+  border: none;
+
+  option {
+    color: var(--color-black);
+  }
+
+  @include mobile-above {
+    @include visually-hidden;
+  }
+}
+.body {
+  position: relative;
+}
+
+.button {
+  display: flex;
+  cursor: pointer;
+  user-select: none;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  height: 100%;
+  column-gap: 10px;
+
+  @include mobile {
+    @include visually-hidden;
+  }
+}
+
+.dropdown {
+  position: absolute;
+  width: 100%;
+  margin-top: 20px;
+  background-color: var(--color-white);
+  color: var(--color-black);
+  border-radius: var(--border-radius-l);
+  overflow: hidden;
+  z-index: var(--z-index-under);
+}
+
+.option {
+  padding: 15px;
+
+  @include hover {
+    background-color: var(--color-grey-03);
+    cursor: pointer;
+  }
+}
+.isFocused {
+  background-color: var(--color-grey-03);
+}

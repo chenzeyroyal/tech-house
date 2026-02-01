@@ -1,12 +1,7 @@
-import Layout from "@/app/Layout";
-import Favorites from "@/entities/sections/Favorites";
+import Favorites from "@/widgets/sections/Favorites";
 
 const FavoritesPage = () => {
-  return (
-    <Layout>
-      <Favorites />
-    </Layout>
-  );
+  return <Favorites />;
 };
 
 export default FavoritesPage;

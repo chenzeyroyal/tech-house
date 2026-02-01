@@ -1,0 +1,24 @@
+.breadcrumbs {
+  padding-top: 50px;
+  padding-bottom: 20px;
+}
+.list {
+  --breadcrumbs-gap: 15px;
+  display: flex;
+  column-gap: var(--breadcrumbs-gap);
+}
+.item {
+  display: flex;
+  column-gap: var(--breadcrumbs-gap);
+
+  &:not(:first-child) {
+    &:before {
+      content: "—";
+    }
+  }
+}
+.link {
+  @include hover {
+    color: var(--color-accent);
+  }
+}

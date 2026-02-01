@@ -2,13 +2,16 @@ import Icon from "../Icon";
 
 import classNames from "classnames";
 import styles from "./Button.module.scss";
+import { Link } from "react-router-dom";
+import { memo } from "react";
 
 const Button = (props) => {
   const {
     className = "",
     label,
-    href,
+    to,
     ref,
+    disabled,
     type = "button",
     mode = "plate",
     icon,
@@ -18,11 +21,11 @@ const Button = (props) => {
     onClick,
   } = props;
 
-  const isLink = href !== undefined;
-  const Component = isLink ? "a" : "button";
+  const isLink = to !== undefined;
+  const Component = isLink ? Link : "button";
   const title = isLabelHidden ? label : undefined;
   const btnProps = { type };
-  const linkProps = { href };
+  const linkProps = { to };
   const specificProps = isLink ? linkProps : btnProps;
 
   return (
@@ -33,7 +36,8 @@ const Button = (props) => {
         styles[mode],
         isAccent && styles.isAccent
       )}
-      href={href}
+      to={to}
+      disabled={disabled}
       ref={ref}
       title={title}
       aria-label={title}
@@ -49,4 +53,4 @@ const Button = (props) => {
   );
 };
 
-export default Button;
+export default memo(Button);

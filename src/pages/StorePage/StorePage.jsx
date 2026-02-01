@@ -1,12 +1,7 @@
-import Layout from "@/app/Layout";
-import Products from "@/entities/sections/Products";
+import Store from "@/widgets/sections/Store";
 
 const StorePage = () => {
-  return (
-    <Layout>
-      <Products />
-    </Layout>
-  );
+  return <Store />;
 };
 
 export default StorePage;

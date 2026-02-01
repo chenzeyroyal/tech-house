@@ -1,5 +1,6 @@
 import classNames from "classnames";
 import styles from "./BurgerButton.module.scss";
+import { memo } from "react";
 
 const BurgerButton = (props) => {
   const { label, menuId, onClick, isActive } = props;
@@ -35,4 +36,4 @@ const BurgerButton = (props) => {
   );
 };
 
-export default BurgerButton;
+export default memo(BurgerButton);

@@ -1,0 +1,29 @@
+.rating {
+  display: flex;
+  align-items: center;
+  column-gap: 5px;
+
+  .stars {
+    display: flex;
+    column-gap: 2px;
+  }
+  .star {
+    color: var(--color-orange);
+  }
+
+  .isFilled {
+    color: var(--color-orange);
+  }
+
+  .quantity {
+    color: var(--color-accent);
+
+    @include hover {
+      color: var(--color-grey-02);
+    }
+  }
+}
+
+.small {
+  justify-content: center;
+}

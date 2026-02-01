@@ -1,6 +1,5 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
-import SliderCard from "@/shared/ui/SliderCard";
 import SliderNavigation from "./components/SliderNavigation";
 
 import "swiper/css";
@@ -15,7 +14,7 @@ const defaultParams = {
 const Slider = (props) => {
   const {
     params = defaultParams,
-    slides = [],
+    children,
     navigationPrevRef,
     navigationNextRef,
     paginationRef,
@@ -23,9 +22,9 @@ const Slider = (props) => {
   } = props;
 
   const onBeforeInit = (swiper) => {
-    swiper.params.navigation.prevEl = navigationPrevRef.current;
-    swiper.params.navigation.nextEl = navigationNextRef.current;
-    swiper.params.pagination.el = paginationRef.current;
+    swiper.params.navigation.prevEl = navigationPrevRef?.current;
+    swiper.params.navigation.nextEl = navigationNextRef?.current;
+    swiper.params.pagination.el = paginationRef?.current;
   };
 
   return (
@@ -39,11 +38,12 @@ const Slider = (props) => {
         onBeforeInit={onBeforeInit}
         {...params}
       >
-        {slides.map((slide, index) => (
+        {children.map((item, index) => (
           <SwiperSlide className={styles.slide} key={index}>
-            <SliderCard {...slide} />
+            {item}
           </SwiperSlide>
         ))}
+
         {hasNavigationInner && (
           <SliderNavigation
             placement="inside"

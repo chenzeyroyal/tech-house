@@ -1,0 +1,60 @@
+.info {
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+
+  @include mobile {
+    align-items: center;
+  }
+}
+
+.link {
+  @include hover {
+    color: var(--color-accent);
+  }
+}
+
+.title,
+.link {
+  min-height: calc(2em * 1.2);
+
+  font-weight: 600;
+}
+
+.specification {
+  display: flex;
+  column-gap: 5px;
+
+  span:first-child {
+    color: var(--color-grey-03);
+  }
+}
+
+.showMoreLink {
+  color: var(--color-accent);
+
+  @include hover {
+    color: var(--color-grey-02);
+  }
+}
+
+/*----------------MODES--------------*/
+
+.small {
+  .link {
+    text-align: center;
+  }
+  align-items: center;
+}
+
+.large {
+  @include tablet {
+    align-items: center;
+  }
+  .title {
+    font-size: fluid-to-laptop(30, 20);
+    font-weight: 700;
+  }
+}
+
+/*----------------------------------*/

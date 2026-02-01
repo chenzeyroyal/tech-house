@@ -1,0 +1,25 @@
+.list {
+  --gap: 20px;
+  display: flex;
+  justify-content: stretch;
+  width: 100%;
+  column-gap: var(--gap);
+
+  @include mobile {
+    flex-direction: column;
+    row-gap: var(--gap);
+  }
+
+  @include tablet {
+    gap: var(--gap);
+    overflow-y: auto;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+}
+
+.column {
+  flex-direction: column;
+  row-gap: var(--gap);
+}

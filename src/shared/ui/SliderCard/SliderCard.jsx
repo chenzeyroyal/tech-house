@@ -2,7 +2,7 @@ import Button from "@/shared/ui/Button/Button";
 import styles from "./SliderCard.module.scss";
 
 const SliderCard = (props) => {
-  const { title, subtitle, buttonLabel, image } = props;
+  const { title, subtitle, href, buttonLabel, image } = props;
 
   return (
     <div className={styles.card}>
@@ -11,12 +11,12 @@ const SliderCard = (props) => {
         <p className={styles.subtitle}>{subtitle}</p>
         <Button
           className={styles.button}
-          href="/"
+          to={href}
           mode="transparent"
           label={buttonLabel}
         />
       </div>
-      <img className={styles.image} src={image} alt="" />
+      <img className={styles.image} src={image} alt=""/>
     </div>
   );
 };

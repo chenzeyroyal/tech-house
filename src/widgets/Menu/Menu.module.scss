@@ -1,0 +1,21 @@
+.menu {
+  display: flex;
+
+  @include tablet {
+    position: fixed;
+    background-color: var(--color-black);
+    left: 0;
+    bottom: 0;
+    height: var(--menu-mobile-height);
+    width: 100%;
+    z-index: var(--z-index-under);
+  }
+}
+
+.list {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  column-gap: 15px;
+  width: 100%;
+}

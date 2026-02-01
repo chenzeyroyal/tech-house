@@ -1,5 +1,8 @@
+import classNames from "classnames";
+
 const Icon = (props) => {
   const {
+    className,
     name,
     width = 25,
     height = 25,
@@ -9,6 +12,7 @@ const Icon = (props) => {
 
   return (
     <svg
+      className={classNames(className)}
       width={width}
       height={height}
       fill={fill}

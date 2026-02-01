@@ -1,0 +1,25 @@
+.header {
+  position: sticky;
+  top: 0;
+  background-color: var(--color-accent-dark);
+  z-index: var(--z-index-under);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: fluid-to-laptop(20, 10);
+  column-gap: 50px;
+
+  @include tablet {
+    flex-direction: column;
+    row-gap: 5px;
+  }
+}
+
+.searchBar {
+  display: flex;
+  column-gap: 8px;
+  width: 100%;
+  background-color: var(--color-white);
+  border-radius: var(--border-radius-xl);
+  padding: 5px;
+}

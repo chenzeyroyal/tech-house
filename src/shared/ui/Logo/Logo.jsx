@@ -1,10 +1,11 @@
+import { Link } from "react-router-dom";
 import styles from "./Logo.module.scss";
 
 const Logo = () => {
   return (
-    <a className={styles.logo} href="/">
-      <img src="/logo.png" width={400} />
-    </a>
+    <Link className={styles.logo} to="/">
+      <img src={`${import.meta.env.BASE_URL}logo.png`} alt="Логотип сайта" />
+    </Link>
   );
 };
 

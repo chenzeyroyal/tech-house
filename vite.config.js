@@ -4,35 +4,40 @@ import { fileURLToPath, URL } from "node:url";
 import svgSprite from "vite-plugin-svg-sprite";
 
 // https://vite.dev/config/
-export default defineConfig({
-  plugins: [
-    react(),
-    svgSprite({
-      symbolId: "icon-[name]",
-      svgo: {
-        plugins: [
-          {
-            name: "removeAttrs",
-            params: {
-              attrs: "fill|class",
+export default defineConfig(({ mode }) => {
+  const isProd = mode === "production";
+
+  return {
+    base: isProd ? "/store-react/" : "/",
+    plugins: [
+      react(),
+      svgSprite({
+        symbolId: "icon-[name]",
+        svgo: {
+          plugins: [
+            {
+              name: "removeAttrs",
+              params: {
+                attrs: "fill|class",
+              },
             },
-          },
-        ],
-      },
-    }),
-  ],
-  css: {
-    preprocessorOptions: {
-      scss: {
-        additionalData: `
+          ],
+        },
+      }),
+    ],
+    css: {
+      preprocessorOptions: {
+        scss: {
+          additionalData: `
           @use '@/app/styles/helpers' as *;
         `,
+        },
       },
     },
-  },
-  resolve: {
-    alias: {
-      "@": fileURLToPath(new URL("./src", import.meta.url)),
+    resolve: {
+      alias: {
+        "@": fileURLToPath(new URL("./src", import.meta.url)),
+      },
     },
-  },
+  };
 });

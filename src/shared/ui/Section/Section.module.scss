@@ -1,0 +1,19 @@
+.section {
+  padding-block: fluid-to-laptop(30, 20);
+}
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.title {
+  display: flex;
+  column-gap: 5px;
+  margin: 0;
+}
+
+.meta {
+  filter: brightness(0.5);
+}

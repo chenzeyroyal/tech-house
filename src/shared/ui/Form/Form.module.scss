@@ -1,0 +1,16 @@
+.form {
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+  margin-inline: auto;
+}
+.title {
+  font-size: fluid-to-laptop(20, 16);
+  font-weight: 700;
+}
+
+.error {
+  font-size: 14px;
+  color: var(--color-red);
+}

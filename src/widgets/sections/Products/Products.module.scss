@@ -1,0 +1,21 @@
+.sortSelect {
+  justify-self: flex-end;
+  margin-bottom: 15px;
+  @include tablet {
+    justify-self: center;
+  }
+}
+
+.products {
+  display: flex;
+  column-gap: 100px;
+  min-height: fluid-to-laptop(750, 550);
+
+  @include tablet {
+    flex-direction: column;
+    row-gap: 20px;
+  }
+}
+.listWrapper {
+  width: 100%;
+}

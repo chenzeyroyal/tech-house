@@ -1,0 +1,9 @@
+.favorites {
+  min-height: fluid-to-laptop(750, 600);
+}
+
+.clearButton {
+  @include hover {
+    background-color: var(--color-accent-light);
+  }
+}

@@ -1,0 +1,34 @@
+.list {
+  display: flex;
+  justify-content: space-between;
+  column-gap: 10px;
+
+  @include tablet {
+    overflow-y: auto;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+}
+.listItem {
+  @include tablet {
+    flex-shrink: 0;
+    max-width: 75px;
+  }
+}
+.listLink {
+  border-radius: 50%;
+  border: var(--border-width-l) solid var(--color-accent);
+  transition: border-color var(--transition-duration) ease-in-out;
+  overflow: hidden;
+
+  @include hover {
+    border-color: var(--color-grey-03);
+    .image {
+      scale: 1.1;
+    }
+  }
+  .image {
+    transition-duration: var(--transition-duration);
+  }
+}

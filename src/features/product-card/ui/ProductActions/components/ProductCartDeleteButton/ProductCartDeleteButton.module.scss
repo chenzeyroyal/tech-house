@@ -1,0 +1,5 @@
+.deleteButton {
+  @include hover {
+    background-color: var(--color-accent-dark);
+  }
+}

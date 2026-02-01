@@ -1,13 +1,14 @@
 import styles from "./CategoryCard.module.scss";
+import { Link } from "react-router-dom";
 
 const CategoryCard = (props) => {
-  const { title, href, image } = props;
+  const { id, title, image } = props;
 
   return (
-    <a className={styles.categoryCard} href={href}>
+    <Link className={styles.categoryCard} to={`/categories/${id}`}>
       <img className={styles.image} src={image} alt="" width={150} />
-      <h3 className={styles.title}>{title}</h3>
-    </a>
+      <span className={styles.title}>{title}</span>
+    </Link>
   );
 };
 

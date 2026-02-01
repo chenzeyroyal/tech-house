@@ -1,0 +1,17 @@
+.list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+
+  @include tablet {
+    flex-wrap: nowrap;
+    overflow-y: auto;
+    justify-content: flex-start;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,31 @@
+.header {
+  display: flex;
+  align-items: center;
+}
+.header {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+}
+.title {
+  font-weight: 700;
+}
+
+.content {
+  display: grid;
+  grid-template-rows: 0fr;
+
+  .inner {
+    overflow: hidden;
+  }
+}
+
+.details[open] {
+  .icon {
+    rotate: 180deg;
+  }
+  & + .content {
+    grid-template-rows: 1fr;
+  }
+}
